@@ -1,6 +1,5 @@
 package main
 
-
 import (
 	"todomgr/cmd"
 )

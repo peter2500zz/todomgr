@@ -40,9 +40,9 @@ var listTodo = &cobra.Command{
 			}
 
 			fmt.Printf(
-				"%d. [%s] %s\n", 
-				i+1, 
-				checkmark, 
+				"%d. [%s] %s\n",
+				i+1,
+				checkmark,
 				descStyle.Render(item.Description),
 			)
 		}

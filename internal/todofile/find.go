@@ -33,6 +33,3 @@ func lookUpTodoFile(dir string) (string, error) {
 
 	return lookUpTodoFile(parent)
 }
-
-
-

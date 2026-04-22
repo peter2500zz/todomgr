@@ -1,10 +1,11 @@
 package todofile
 
-import "strings"
+import (
+	"os"
+	"strings"
+)
 
-import "os"
-
-func WriteTodoFile(path string, items []TodoItem) error {
+func WriteTodoFile(path string, items TodoList) error {
 	file, err := os.Create(path)
 	if err != nil {
 		return err

@@ -46,4 +46,5 @@ func Execute() {
 func init() {
 	rootCmd.AddCommand(listTodo)
 	rootCmd.AddCommand(doneTodo)
+	rootCmd.AddCommand(newTodo)
 }

@@ -2,4 +2,7 @@
 
 - [x] finish my job
 - [x] list
-- [ ] read todo file
+- [x] read todo file
+- [x] add todo item
+- [ ] swap todo
+- [ ] del todo

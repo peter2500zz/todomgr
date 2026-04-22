@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func ReadTodo(path string) ([]TodoItem, error) {
+func ReadTodo(path string) (TodoList, error) {
 	content, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
@@ -13,7 +13,7 @@ func ReadTodo(path string) ([]TodoItem, error) {
 
 	lines := strings.Split(string(content), "\n")
 
-	var items []TodoItem
+	var items TodoList
 	for _, line := range lines {
 		// skip empty lines
 		if line == "" {

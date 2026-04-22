@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"todomgr/internal/todofile"
 
-	"charm.land/lipgloss/v2"
 	"github.com/spf13/cobra"
 )
 
@@ -24,26 +23,11 @@ var listTodo = &cobra.Command{
 		}
 
 		for i, item := range items {
-			var descStyle = lipgloss.NewStyle()
-			var checkmark string = " "
-
-			if item.Completed {
-				// weak and strikethrough
-				descStyle = descStyle.Faint(true)
-				descStyle = descStyle.StrikethroughSpaces(true)
-
-				// green checkmark
-				checkmark = lipgloss.
-					NewStyle().
-					Foreground(lipgloss.Color("#00FF00")).
-					Render("x")
-			}
 
 			fmt.Printf(
-				"%d. [%s] %s\n",
+				"%d. %s\n",
 				i+1,
-				checkmark,
-				descStyle.Render(item.Description),
+				item.StringPetty(),
 			)
 		}
 	},

@@ -4,5 +4,5 @@
 - [x] list
 - [x] read todo file
 - [x] add todo item
-- [ ] swap todo
+- [x] swap todo
 - [ ] del todo

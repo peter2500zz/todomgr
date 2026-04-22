@@ -13,7 +13,7 @@ var rootCmd = &cobra.Command{
 		// print the next suggested todo
 		path, err := todofile.GetTodoFilePath()
 		if err != nil {
-			fmt.Printf("Error: %s\n", err)
+			fmt.Printf("Type todo help for usage information.\n")
 			return
 		}
 
@@ -47,4 +47,5 @@ func init() {
 	rootCmd.AddCommand(listTodo)
 	rootCmd.AddCommand(doneTodo)
 	rootCmd.AddCommand(newTodo)
+	rootCmd.AddCommand(swapTodo)
 }

@@ -9,7 +9,7 @@ import (
 )
 
 var doneTodo = &cobra.Command{
-	Use: "done",
+	Use: "done <index1> <index2> ...",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Printf("Error: done need more than 1 argument\n")

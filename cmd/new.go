@@ -8,7 +8,7 @@ import (
 )
 
 var newTodo = &cobra.Command{
-	Use: "new",
+	Use: "new \"<something todo>\"",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) != 1 {
 			fmt.Printf("Usage: todo new \"<something todo>\"\n")

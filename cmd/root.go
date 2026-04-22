@@ -49,4 +49,5 @@ func init() {
 	rootCmd.AddCommand(undoTodo)
 	rootCmd.AddCommand(newTodo)
 	rootCmd.AddCommand(swapTodo)
+	rootCmd.AddCommand(delTodo)
 }

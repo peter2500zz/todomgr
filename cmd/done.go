@@ -13,6 +13,7 @@ var doneTodo = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			fmt.Printf("Error: done need more than 1 argument\n")
+			return
 		}
 
 		path, err := todofile.GetTodoFilePath()
